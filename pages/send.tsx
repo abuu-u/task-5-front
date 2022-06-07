@@ -9,6 +9,7 @@ import { sendSchema } from '../common/validation-schemas'
 import Input from '../components/input'
 import MainLayout from '../components/layouts/main-layout'
 import { NextLinkComposed } from '../components/link'
+import useMessages from '../hooks/use-messages'
 import { sendMessage, SendMessageRequest } from '../services/messages'
 import { getNames } from '../services/users'
 
@@ -26,6 +27,8 @@ const Send: NextPage = () => {
     },
     resolver: yupResolver(sendSchema),
   })
+
+  useMessages()
 
   const router = useRouter()
 
