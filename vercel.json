@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/task5/:match*",
+      "destination": "http://152.67.78.133/task5/:match*"
+    }
+  ]
+}
